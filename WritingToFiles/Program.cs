@@ -1,21 +1,23 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 
 namespace WritingToFiles
 {
+
+    //to write to files we need System.IO
+    // File is a class of System.io;
+
     class Program
     {
         static void Main(string[] args)
         {
-            // The code provided will print ‘Hello World’ to the console.
-            // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("System.IO - Writing to files - writing to WritingToFiles\\bin\\Debug\\text.txt");
+
+            string str = "string stringa yo yo! (felicità)";
+            File.WriteAllText("text.txt", str);
+
             Console.ReadKey();
 
-            // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
         }
     }
 }
